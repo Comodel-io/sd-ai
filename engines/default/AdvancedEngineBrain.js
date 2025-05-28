@@ -98,11 +98,7 @@ You will conduct a multistep process:
 
 5. If there are no causal relationships at all in the provided text, return an empty JSON array.  Do not create relationships which do not exist in reality.
 
-6. Try as hard as you can to close feedback loops between the variables you find. It is very important that your answer includes feedback.  A feedback loop happens when there is a closed causal chain of relationships.  An example would be “Variable1” causes “Variable2” to increase, which causes “Variable3” to decrease which causes “Variable1” to again increase.  Try to find as many of the feedback loops as you can.
-
-7. Though json keys should always be english, json values for the "to", "from", "explanation", "title", "reasoning" and "polarityReasoning", should always match any non-english language used in the <problemStatement>. 
-
-`
+6. Try as hard as you can to close feedback loops between the variables you find. It is very important that your answer includes feedback.  A feedback loop happens when there is a closed causal chain of relationships.  An example would be “Variable1” causes “Variable2” to increase, which causes “Variable3” to decrease which causes “Variable1” to again increase.  Try to find as many of the feedback loops as you can.`
 
     static DEFAULT_ASSISTANT_PROMPT = 
 `I want your response to consider all of the above relationships which you have already so helpfully given to us.  Your response should add new relationships and close feedback loops wherever you have evidence to support the existence of the relationships needed to close the feedback loop.  Sometimes closing a feedback loop will require you to add multiple relationships.`
@@ -116,12 +112,9 @@ You will conduct a multistep process:
 `Find out if there are any possibilities of forming closed feedback loops that are implied in the analysis that you are doing. If it is possible to create a feedback loop using the variables you've found in your analysis, then close any feedback loops you can by adding the extra relationships which are necessary to do so.  This may require you to add many relationships.  This is okay as long as there is evidence to support each relationship you add.`
 
     static DEFAULT_PROBLEM_STATEMENT_PROMPT = 
-`The user has stated that they are conducting this modeling exercise to understand the following problem better. This is called a problem statement. 
+`The user has stated that they are conducting this modeling exercise to understand the following problem better.
 
-<problemStatement>
-{problemStatement}
-</problemStatement>
-`
+{problemStatement}`
 
     #data = {
         backgroundKnowledge: null,
