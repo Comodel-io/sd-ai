@@ -193,9 +193,9 @@ export class LLMWrapper {
     "relationship": "This is a relationship between two variables, from and to (from is the cause, to is the effect).  The relationship also contains a polarity which describes how a change in the from variable impacts the to variable",
 
     "relationships": "The list of relationships you think are appropriate to satisfy my request based on all of the information I have given you",
-    
-    "explanation": "Concisely explain your reasoning for each change you made to the old model to create the new model. Speak in plain English, refer to system archetypes, don't reference json specifically. Don't reiterate the request or any of these instructions.",
-    
+
+    "explanation": "A markdown list of super concise explanations for each change you made to the old model to create the new model. Speak in plain English, refer to system archetypes, don't reference json specifically. Don't reiterate the request or any of these instructions.",
+
     "title": "A highly descriptive 7 word max title describing your explanation.",
 
     "quantExplanation": "Concisely explain your reasoning for each change you made to the old model to create the new model. Speak in plain English, refer to system archetypes, don't reference json specifically. Don't reiterate the request or any of these instructions.",
